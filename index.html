@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maju Modas | Estilo que combina com você</title>
+
+    <meta name="description" content="Maju Modas - Moda feminina, estilo e personalidade para você. Conheça nossa coleção.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: #262323;
+            background: #fffaf7;
+            line-height: 1.6;
+        }
+
+        :root {
+            --rose: #c87968;
+            --rose-dark: #a85d50;
+            --cream: #fffaf7;
+            --beige: #f5e8df;
+            --dark: #252222;
+            --white: #ffffff;
+        }
+
+        /* HEADER */
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 250, 247, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            text-decoration: none;
+            color: var(--dark);
+            text-align: center;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            letter-spacing: 5px;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            letter-spacing: 6px;
+            margin-top: 7px;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 14px;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--rose);
+        }
+
+        .nav-button {
+            background: var(--dark);
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 30px;
+        }
+
+        .nav-button:hover {
+            background: var(--rose);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 720px;
+            padding: 150px 25px 90px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,250,247,1) 0%,
+                    rgba(255,250,247,.96) 42%,
+                    rgba(255,250,247,.35) 100%
+                ),
+                url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .hero-text {
+            max-width: 580px;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--rose);
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 1.02;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--rose);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 500px;
+            color: #5d5653;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--dark);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--rose);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--dark);
+            color: var(--dark);
+        }
+
+        .btn-outline:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 100px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-header span {
+            color: var(--rose);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+            margin: 10px 0 15px;
+        }
+
+        .section-header p {
+            max-width: 600px;
+            margin: auto;
+            color: #706865;
+        }
+
+        /* CATEGORIES */
+
+        .categories {
+            background: var(--white);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .category {
+            position: relative;
+            height: 420px;
+            border-radius: 18px;
+            overflow: hidden;
+            text-decoration: none;
+            color: white;
+        }
+
+        .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .category:hover img {
+            transform: scale(1.06);
+        }
+
+        .category::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                transparent 35%,
+                rgba(0,0,0,.65)
+            );
+        }
+
+        .category-content {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            z-index: 2;
+        }
+
+        .category-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+        }
+
+        /* PRODUCTS */
+
+        .products {
+            background: var(--cream);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .product:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.08);
+        }
+
+        .product-image {
+            height: 330px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .product:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info small {
+            color: var(--rose);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-info h3 {
+            margin: 5px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 21px;
+        }
+
+        .product-price {
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: var(--beige);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 550px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text span {
+            color: var(--rose);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            line-height: 1.1;
+            margin: 15px 0 25px;
+        }
+
+        .about-text p {
+            color: #655e5a;
+            margin-bottom: 18px;
+        }
+
+        /* BENEFITS */
+
+        .benefits {
+            background: white;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 35px 25px;
+            border: 1px solid #eee2dc;
+            border-radius: 15px;
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: auto auto 20px;
+            border-radius: 50%;
+            background: var(--beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .benefit h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .benefit p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* TESTIMONIALS */
+
+        .testimonials {
+            background: var(--cream);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .stars {
+            color: var(--rose);
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        .testimonial p {
+            color: #5e5855;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial strong {
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: var(--dark);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 55px;
+            line-height: 1.1;
+            margin: 15px 0 20px;
+        }
+
+        .contact p {
+            color: #d6cfcc;
+            max-width: 500px;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-item-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #3a3533;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            color: var(--dark);
+        }
+
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid #ddd;
+            padding: 14px 16px;
+            border-radius: 8px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--rose);
+        }
+
+        .form-submit {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #1b1919;
+            color: white;
+            padding: 50px 25px 25px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding-bottom: 35px;
+        }
+
+        .footer-logo .logo-main {
+            color: white;
+        }
+
+        .footer-description {
+            color: #aaa;
+            max-width: 350px;
+            margin-top: 15px;
+        }
+
+        .socials {
+            display: flex;
+            gap: 10px;
+        }
+
+        .socials a {
+            width: 42px;
+            height: 42px;
+            border: 1px solid #444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .socials a:hover {
+            background: var(--rose);
+            border-color: var(--rose);
+        }
+
+        .copyright {
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 25px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 13px;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 27px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.2);
+            z-index: 999;
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 650px;
+                background:
+                    linear-gradient(
+                        rgba(255,250,247,.85),
+                        rgba(255,250,247,.95)
+                    ),
+                    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80")
+                    center/cover;
+            }
+
+            .category-grid,
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 70px 18px;
+            }
+
+            .hero {
+                padding: 130px 20px 70px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-header h2,
+            .about-text h2,
+            .contact h2 {
+                font-size: 38px;
+            }
+
+            .category-grid,
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category {
+                height: 380px;
+            }
+
+            .product-image {
+                height: 400px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="navbar">
+
+        <a href="#" class="logo">
+            <div class="logo-main">MAJU</div>
+            <div class="logo-sub">MODAS</div>
+        </a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#colecao">Coleção</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato" class="nav-button">Fale Conosco</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <div class="eyebrow">
+                Maju Modas
+            </div>
+
+            <h1>
+                Seu estilo.<br>
+                Sua <span>essência.</span>
+            </h1>
+
+            <p>
+                Encontre peças que combinam com quem você é.
+                Moda, personalidade e elegância para todos os momentos.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#colecao" class="btn btn-primary">
+                    Conheça nossa coleção
+                </a>
+
+                <a href="#contato" class="btn btn-outline">
+                    Fale conosco
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIAS -->
+
+<section class="categories" id="colecao">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Encontre seu estilo</span>
+
+            <h2>Escolha sua próxima peça</h2>
+
+            <p>
+                Selecionamos tendências e peças atemporais
+                para você criar looks que tenham a sua cara.
+            </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+            <a href="#" class="category">
+
+                <img
+                    src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85"
+                    alt="Moda feminina"
+                >
+
+                <div class="category-content">
+                    <h3>Moda Feminina</h3>
+                </div>
+
+            </a>
+
+
+            <a href="#" class="category">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
+                    alt="Looks modernos"
+                >
+
+                <div class="category-content">
+                    <h3>Looks & Tendências</h3>
+                </div>
+
+            </a>
+
+
+            <a href="#" class="category">
+
+                <img
+                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
+                    alt="Coleção especial"
+                >
+
+                <div class="category-content">
+                    <h3>Nova Coleção</h3>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUTOS -->
+
+<section class="products">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Novidades</span>
+
+            <h2>Destaques da Maju</h2>
+
+            <p>
+                Algumas peças que podem fazer parte do seu próximo look.
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85"
+                        alt="Vestido"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <small>Nova coleção</small>
+
+                    <h3>Vestido Elegance</h3>
+
+                    <div class="product-price">
+                        R$ 189,90
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=85"
+                        alt="Blusa feminina"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <small>Mais vendido</small>
+
+                    <h3>Blusa Serena</h3>
+
+                    <div class="product-price">
+                        R$ 119,90
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=700&q=85"
+                        alt="Look feminino"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <small>Destaque</small>
+
+                    <h3>Look Maju</h3>
+
+                    <div class="product-price">
+                        R$ 229,90
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=85"
+                        alt="Moda feminina"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <small>Novidade</small>
+
+                    <h3>Conjunto Bella</h3>
+
+                    <div class="product-price">
+                        R$ 199,90
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOBRE -->
+
+<section class="about" id="sobre">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=85"
+                    alt="Maju Modas"
+                >
+
+            </div>
+
+
+            <div class="about-text">
+
+                <span>Sobre a Maju</span>
+
+                <h2>
+                    Moda para você
+                    ser quem é.
+                </h2>
+
+                <p>
+                    A Maju Modas nasceu para tornar a moda
+                    mais leve, acessível e conectada com a
+                    personalidade de cada mulher.
+                </p>
+
+                <p>
+                    Acreditamos que se vestir bem vai muito
+                    além de acompanhar tendências. É sobre
+                    autoestima, autenticidade e se sentir
+                    bem com aquilo que você veste.
+                </p>
+
+                <a href="#contato" class="btn btn-primary">
+                    Conheça a Maju
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BENEFÍCIOS -->
+
+<section class="benefits">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Por que escolher a Maju?</span>
+
+            <h2>Uma experiência feita para você</h2>
+
+        </div>
+
+
+        <div class="benefit-grid">
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ♡
+                </div>
+
+                <h3>Atendimento próximo</h3>
+
+                <p>
+                    Estamos aqui para ajudar você
+                    a encontrar o look perfeito.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ✦
+                </div>
+
+                <h3>Estilo & qualidade</h3>
+
+                <p>
+                    Peças selecionadas pensando
+                    em estilo, conforto e qualidade.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="benefit-icon">
+                    ♧
+                </div>
+
+                <h3>Novidades sempre</h3>
+
+                <p>
+                    Fique por dentro das novidades
+                    e tendências da moda.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DEPOIMENTOS -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Quem já conhece</span>
+
+            <h2>O que nossas clientes dizem</h2>
+
+        </div>
+
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Amei minha experiência com a Maju!
+                    As peças são lindas e o atendimento
+                    fez toda diferença.”
+                </p>
+
+                <strong>— Mariana</strong>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Sempre encontro peças lindas e
+                    diferentes. A Maju virou minha
+                    loja favorita!”
+                </p>
+
+                <strong>— Camila</strong>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    “Além das roupas serem maravilhosas,
+                    o atendimento é super atencioso.
+                    Recomendo muito!”
+                </p>
+
+                <strong>— Juliana</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTATO -->
+
+<section class="contact" id="contato">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div>
+
+                <span class="eyebrow">
+                    Fale conosco
+                </span>
+
+                <h2>
+                    Conte com a gente!
+                </h2>
+
+                <p>
+                    Ficou com alguma dúvida?
+                    Quer saber sobre tamanhos, peças,
+                    novidades ou fazer um pedido?
+                    Estamos aqui para ajudar.
+                </p>
+
+
+                <div class="contact-info">
+
+                    <div class="contact-item">
+
+                        <div class="contact-item-icon">
+                            ☎
+                        </div>
+
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <br>
+                            (31) 99999-9999
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-item-icon">
+                            ✉
+                        </div>
+
+                        <div>
+                            <strong>E-mail</strong>
+                            <br>
+                            contato@majumodas.com.br
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-item-icon">
+                            ⌖
+                        </div>
+
+                        <div>
+                            <strong>Endereço</strong>
+                            <br>
+                            Sua cidade • MG
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <h3>Envie uma mensagem</h3>
+
+                <form
+                    onsubmit="enviarFormulario(event)"
+                >
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            placeholder="Seu nome"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <input
+                            type="email"
+                            placeholder="Seu melhor e-mail"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <input
+                            type="tel"
+                            placeholder="WhatsApp"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <textarea
+                            placeholder="Como podemos ajudar?"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary form-submit"
+                    >
+                        Enviar mensagem
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <div class="footer-logo">
+
+                <div class="logo-main">
+                    MAJU
+                </div>
+
+                <div class="logo-sub">
+                    MODAS
+                </div>
+
+            </div>
+
+            <p class="footer-description">
+                Estilo que combina com você.
+                Moda, personalidade e autenticidade.
+            </p>
+
+        </div>
+
+
+        <div class="socials">
+
+            <a href="#" aria-label="Instagram">
+                IG
+            </a>
+
+            <a href="#" aria-label="Facebook">
+                FB
+            </a>
+
+            <a href="#" aria-label="TikTok">
+                TK
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Maju Modas. Todos os direitos reservados.
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/5531999999999"
+    target="_blank"
+    aria-label="Falar no WhatsApp"
+>
+    ☎
+</a>
+
+
+<script>
+
+function enviarFormulario(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Obrigada pelo contato! 💗 Em breve a Maju Modas falará com você."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
